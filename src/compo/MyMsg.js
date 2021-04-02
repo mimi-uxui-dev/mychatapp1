@@ -1,6 +1,6 @@
 const MyMsg = ({ message }) => {
 
-    // If my msg is an img return this code
+    // If my msg is an attachment return this code
     if(message?.attachments?.length > 0 ){
         return (
             <img 
@@ -10,8 +10,8 @@ const MyMsg = ({ message }) => {
                 style={{ float: 'right' }}
             />
         )
-        
     }
+    
     return (
         <div clasNmae="message" style={{ float: 'right', color: 'white', backgroundColor: '#070707'}}>
             {message.text}

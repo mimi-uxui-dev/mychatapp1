@@ -17,12 +17,12 @@ const ChatFeed = (props) => {
 
         return keys.map((key, index) => {
             const message = messages[key]
-            const lastMessageKey = index === 0 ? null : keys[inde - 1]
+            const lastMessageKey = index === 0 ? null : keys[index - 1]
             const isMyMessage = userName === message.sender.username
 
             return (
                 <div key={`msg_${index}`} style={{width: '100%'}}>
-                    <div className={message-block}>
+                    <div className='message-block'>
                         {
                             isMyMessage
                             ? <MyMsg message={message} />
@@ -45,8 +45,8 @@ const ChatFeed = (props) => {
             
             <div className='chat-feed'>
                 <div className="chat-title-container">
-                    <div className='chat-title'>{ chat.title }</div>
-                    <div classNmae='chat-subtitle'> {chat.people.map((person) => ` ${person.person.username}`)} </div>
+                    <div className='chat-title'>{ chat?.title }</div>
+                    <div classNmae='chat-subtitle'> {chat?.people.map((person) => ` ${person.person.username}`)} </div>
                 </div>
                 { renderMessages() }
 
