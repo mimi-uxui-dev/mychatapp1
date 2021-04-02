@@ -10,6 +10,7 @@ const MyMsg = ({ message }) => {
                 style={{ float: 'right' }}
             />
         )
+        
     }
     return (
         <div clasNmae="message" style={{ float: 'right', color: 'white', backgroundColor: '#070707'}}>
