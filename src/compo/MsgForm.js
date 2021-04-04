@@ -4,12 +4,12 @@ import { sendMessage, isTyping } from 'react-chat-engine';
 
 const MsgForm = (props) => {
   const [value, setValue] = useState('');
-  const { chatId, creds } = props;
+  const { chatID, creds } = props;
 
   const handleChange = (event) => {
     setValue(event.target.value);
 
-    isTyping(props, chatId);
+    isTyping(props, chatID);
   };
 
   const handleSubmit = (event) => {
@@ -18,14 +18,14 @@ const MsgForm = (props) => {
     const text = value.trim();
 
     if (text.length > 0) {
-      sendMessage(creds, chatId, { text });
+      sendMessage(creds, chatID, { text });
     }
 
     setValue('');
   };
 
   const handleUpload = (event) => {
-    sendMessage(creds, chatId, { files: event.target.files, text: '' });
+    sendMessage(creds, chatID, { files: event.target.files, text: '' });
   };
 
   return (

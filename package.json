@@ -1,5 +1,5 @@
 {
-"homepage": "http://mimi-uxui-dev.github.io/mychatapp1",
+  "homepage": "http://mimi-uxui-dev.github.io/mychatapp1",
   "name": "mychatapp1",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
